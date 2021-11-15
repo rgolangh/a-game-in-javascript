@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>משחק הניחושים של כיתה ה'1</title>
+    <style>
+        body {
+            max-width: 50%;
+            margin: 0 auto;
+            background-color: lightblue;
+        }
+
+        .shiri {
+            content: "33333";
+            font-family: "FontAwesome";
+            position: absolute;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1>משחק הניחושים של כיתה ה'1</h1>
+
+    <p>שלום ✋</p>
+    <p>בחרו במספר בין 1 ל - <span id="limit"></span></p>
+    <div class="shiri"></div>
+    <div class="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <br>
+      <label for="guessField">הניחוש שלכם</label>
+      <input type="text" id="ניחוש" class="guessField">
+      <button onclick='game.guess()'>Submit</button>
+      <br>
+      <button onclick='game.showNumber()'>Show Number</button>
+
+      <h3>Students</h3>
+      <p id="students"></p>
+      <br>
+      <p id="numbers"></p>
+    </div>
+
+    <div id="results">
+      <h3>Guesses</h3>
+      <p id="guesses"></p>
+      <p id="lastResult"></p>
+      <h3>Low or High?</h3>
+      <p id="lowOrHi" style="font-size: 64px"></p>
+    </div>
+
+    <div id="animated" style="position: absolute;top: 0;font-size: 50px;opacity: 50%"></div>
+
+    <script src="main.js"></script>
+    <script>
+        const game = new Game(21);
+    </script>
+  </body>
+</html>
