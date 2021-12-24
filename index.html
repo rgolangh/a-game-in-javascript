@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
   <head>
     <meta charset="utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
 
     <title>משחק הניחושים של כיתה ה'1</title>
     <style>
@@ -27,16 +27,16 @@
     <p>בחרו במספר בין 1 ל - <span id="limit"></span></p>
     <div class="shiri"></div>
     <div class="form">
-      <label for="name">Name:</label>
-      <input type="text" id="name">
+      <label for="name">שם:</label> <input type="text" id="name">
       <br>
       <label for="guessField">הניחוש שלכם</label>
       <input type="text" id="ניחוש" class="guessField">
-      <button onclick='game.guess()'>Submit</button>
       <br>
-      <button onclick='game.showNumber()'>Show Number</button>
+      <button onclick='game.guess()'>נחש!</button>
 
-      <h3>Students</h3>
+      <br>
+
+      <h3>תלמידים</h3>
       <p id="students"></p>
       <br>
       <p id="numbers"></p>
@@ -56,5 +56,6 @@
     <script>
         const game = new Game(21);
     </script>
+    <button onclick='game.showNumber()'>Show Number</button>
   </body>
 </html>
